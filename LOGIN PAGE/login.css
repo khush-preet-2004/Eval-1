@@ -139,9 +139,9 @@ form .form-content label{
 form .form-content label:hover{
     text-decoration: underline;
 }
-/* .container #flip:checked ~ .cover{
+.container #flip:checked ~ .cover{
     transform: rotateY(-180deg);
-} */
+}
 .container .cover img{
     height: 100%;
     position:absolute;
@@ -151,7 +151,4 @@ form .form-content label:hover{
     /* opacity: 0.5; */
     z-index:12;
     backface-visibility: hidden;
-}
-#flip{
-    transform: rotateY(-180deg);
 }
