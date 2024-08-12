@@ -44,10 +44,16 @@
         .product-image {
             width: 100%;
             max-width: 300px;
-            height: auto;
+            height: 200px; /* Set a fixed height */
+            object-fit: cover; /* Ensures the image scales and crops appropriately */
             border-radius: 8px;
             margin-bottom: 20px;
+            opacity:0.5;
         }
+
+        .product-image:hover {
+            opacity: 1.0;
+          }
 
         .product-details {
             text-align: center;
@@ -66,19 +72,47 @@
         }
 
         .buy-now-btn {
-            background-color: #28a745;
-            color: #fff;
-            padding: 10px 20px;
-            font-size: 16px;
+            display: inline-block;
+            border-radius: 8px;
+            background-color: #f4511e;
             border: none;
-            border-radius: 5px;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 18px;
+            padding: 15px 30px;
+            width: 150px;
+            transition: all 0.5s;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            margin: 5px;
         }
+        
+        .buy-now-btn span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        
+        .buy-now-btn span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        
+        .buy-now-btn:hover span {
+            padding-right: 25px;
+        }
+        
+        .buy-now-btn:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+        
 
-        .buy-now-btn:hover {
-            background-color: #218838;
-        }
+
 
         @media (min-width: 768px) {
             .container {
@@ -109,41 +143,42 @@
     <div class="product-grid">
         <div class="container">
             <h1 class="product-title">Product 1</h1>
-            <img src="product-image1.jpg" alt="Product Image 1" class="product-image">
+            <img src="Image1.jpg" alt="Product Image 1" class="product-image">
             <div class="product-details">
                 <p class="product-description">This is a description of product 1.</p>
                 <p class="product-price">$19.99</p>
-                <button class="buy-now-btn">Buy Now</button>
+                <button class="buy-now-btn"  style="vertical-align:middle"><span>Buy Now</span></button>
             </div>
         </div>
 
         <div class="container">
             <h1 class="product-title">Product 2</h1>
-            <img src="product-image2.jpg" alt="Product Image 2" class="product-image">
+            <img src="Image2.jpg" alt="Product Image 2" class="product-image">
             <div class="product-details">
                 <p class="product-description">This is a description of product 2.</p>
                 <p class="product-price">$29.99</p>
-                <button class="buy-now-btn">Buy Now</button>
+                <button class="buy-now-btn"  style="vertical-align:middle"><span>Buy Now</span></button>
             </div>
         </div>
 
         <div class="container">
             <h1 class="product-title">Product 3</h1>
-            <img src="product-image3.jpg" alt="Product Image 3" class="product-image">
+            <img src="Image3.jpg" alt="Product Image 3" class="product-image">
+            
             <div class="product-details">
                 <p class="product-description">This is a description of product 3.</p>
                 <p class="product-price">$39.99</p>
-                <button class="buy-now-btn">Buy Now</button>
+                <button class="buy-now-btn"  style="vertical-align:middle"><span>Buy Now</span></button>
             </div>
         </div>
 
         <div class="container">
             <h1 class="product-title">Product 4</h1>
-            <img src="product-image4.jpg" alt="Product Image 4" class="product-image">
+            <img src="Image4.jpg" alt="Product Image 4" class="product-image">
             <div class="product-details">
                 <p class="product-description">This is a description of product 4.</p>
                 <p class="product-price">$49.99</p>
-                <button class="buy-now-btn">Buy Now</button>
+                <button class="buy-now-btn" style="vertical-align:middle"><span>Buy Now</span></button>
             </div>
         </div>
         
