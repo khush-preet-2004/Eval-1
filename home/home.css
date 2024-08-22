@@ -1,0 +1,131 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+  list-style: none;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+section{
+  padding: 50px 10px;
+}
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 100px;
+  background-color: transparent;
+}
+.logo{
+  font-size: 1.4em;
+  /* font-weight: 600; */
+  color:white;
+}
+.navbar{
+  position: relative;
+  display: flex;
+}
+.navbar ul{
+  align-items: left;
+}
+.navbar ul li{
+  align-self: right;
+}
+.navbar a{
+  font-size: 1.4em;
+  padding: 10px 20px;
+  font-weight: 500;
+  align-items: right;
+  color: white;
+}
+.navbar a:hover{
+  color: pink;
+}
+#menu-icon{
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+.fa-fw{
+  font-size: 2rem;
+}
+.fa-solid{
+  font-size: 2rem;
+}
+.home{
+  width: 100%;
+  height: 550px;
+  /* min-height: 100vh; */
+  background-image: url("https://t4.ftcdn.net/jpg/08/56/60/37/360_F_856603772_39tc2I0I2HZbYGs1ludgpqKGRmwCbW02.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  z-index: 100;
+  /* opacity: 0.6; */
+  /* display: flex; */
+  /* align-items: center; */
+}
+.home:hover{
+    opacity: 0.6;
+}
+.home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 550px;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust color and opacity (RGBA) */
+  pointer-events: none; /* Ensure the overlay doesn't block interactions */
+}
+/*
+.home-text h1{
+  font-size: 2.7rem;
+  left: 50%;
+  vertical-align: center;
+  display: flex;
+}
+.btn{
+  margin: 15px;
+  padding: 10px 14px;
+  background-color: blue;
+  color: #fff;
+  border-radius: 0.3rem;
+  font-size: 14px;
+} */
+.home-text {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+}
+.home-text h1 {
+  font-size: 2.7rem;
+  text-align: center;
+  margin-bottom: 20px; 
+  color: black;
+}
+.home-text p{
+  font-size: 1.7rem;
+  color: ghostwhite;
+}
+.btn {
+  margin: 15px;
+  padding: 10px 14px;
+  background-color: Red;
+  color: #fff;
+  border-radius: 0.3rem;
+  font-size: 14px;
+  cursor: pointer; 
+  text-align: center;
+}
+
