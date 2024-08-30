@@ -1,0 +1,32 @@
+.navbar-brand {
+    margin-left: 30px; 
+}
+
+.navbar-nav .nav-item {
+    margin-left: 40px; 
+}
+.navbar-nav{
+    margin-left:250px;
+}
+
+.nav__search {
+    font-size: 20px;     
+    color: #000;  
+    line-height: 40px;  
+      
+}
+ul li a{
+    text-decoration: none;
+}
+.nav__cart {
+    font-size: 20px;      
+    color: #000;  
+    line-height: 40px;  
+     
+}
+
+.nav__login {
+    font-size: 20px;      
+    color: #000;  
+    line-height: 40px;  
+    }
