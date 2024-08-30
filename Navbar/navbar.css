@@ -1,32 +1,81 @@
 .navbar-brand {
-    margin-left: 30px; 
+    margin-left: 15px;      /* Adjusts space between PORTFOLIO and the HOME link */
+    font-family: cursive;
 }
 
 .navbar-nav .nav-item {
-    margin-left: 40px; 
-}
-.navbar-nav{
-    margin-left:250px;
+    margin-left: 35px;
+    font-family: cursive;    /* Adjusts space between each navigation item */
 }
 
+.navbar-nav {
+    margin-left: 250px;
+}
+
+/* Style for the search icon */
 .nav__search {
-    font-size: 20px;     
-    color: #000;  
-    line-height: 40px;  
-      
+    font-size: 20px;         /* Adjust the size of the icon */
+    color: #000;
+    line-height: 40px;      /* Add space to the left of the icon */
 }
-ul li a{
+
+ul li a {
     text-decoration: none;
+    position: relative;      /* Needed for positioning the pseudo-element */
+    display: inline-block;     /* Ensure the element is inline-block to only underline the text */
+    transition: color 0.3s ease, transform 0.3s ease;   /* Transition effects for color and transform */
 }
+
 .nav__cart {
-    font-size: 20px;      
-    color: #000;  
-    line-height: 40px;  
-     
+    font-size: 20px;
+    color: #000;
+    line-height: 40px;
+
 }
 
 .nav__login {
-    font-size: 20px;      
-    color: #000;  
-    line-height: 40px;  
-    }
+    font-size: 20px;
+    color: #000;
+    line-height: 40px;
+}
+
+ul li a:hover {
+    color: #007bff;     /* Change color on hover */
+    transform: translateY(-3px);      /* Move text upwards on hover */
+}
+
+/* Underline effect */
+ul li a::after {
+    content: '';           /* Creates a pseudo-element */
+    display: block;      /* Makes it a block-level element */
+    width: 0%;            /* Initial width of the underline */
+    height: 2px;        /* Thickness of the underline */
+    background-color: #007bff;         /* Color of the underline */
+    position: absolute;        /* Position relative to the parent */
+    bottom: -4px;        /* Distance from the text */
+    left: 0;
+    transition: width 0.3s ease;      /* Smooth transition for width */
+}
+
+/* Hover effect for the underline */
+ul li a:hover::after {
+    width: 100%;         /* Expands the underline to full width on hover */
+}
+
+/* Style for the search, cart, and login icons */
+.nav__search,
+.nav__cart,
+.nav__login {
+    font-size: 20px;
+    color: #000;
+    line-height: 40px;
+    transition: color 0.3s ease, transform 0.3s ease;        /* Transition effects for color and transform */
+}
+
+/* Hover effect for icons */
+.nav__search:hover,
+.nav__cart:hover,
+.nav__login:hover {
+    color: #007bff;        /* Change icon color on hover */
+    transform: translateY(-3px);    /* Move icon upwards on hover */
+}
