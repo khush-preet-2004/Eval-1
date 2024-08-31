@@ -1,3 +1,4 @@
+
 *{
   margin: 0;
   padding: 0;
@@ -8,9 +9,11 @@
   text-decoration: none;
   font-family: sans-serif;
 }
+
 section{
   padding: 50px 10px;
 }
+
 header{
   position: fixed;
   width: 100%;
@@ -23,58 +26,92 @@ header{
   padding: 18px 100px;
   background-color: transparent;
 }
+
 .logo{
   font-size: 1.4em;
-  /* font-weight: 600; */
-  color:white;
+  color: bisque;
 }
+
 .navbar{
   position: relative;
   display: flex;
 }
+
 .navbar ul{
   align-items: left;
 }
+
 .navbar ul li{
   align-self: right;
 }
+
 .navbar a{
   font-size: 1.4em;
   padding: 10px 20px;
   font-weight: 500;
   align-items: right;
-  color: white;
+  color: bisque;
 }
+
 .navbar a:hover{
-  color: pink;
+  color: wheat;
+}
+#menu-toggle{
+  display: none;
 }
 #menu-icon{
   font-size: 2rem;
   cursor: pointer;
   display: none;
+  color: bisque;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
 }
-.fa-fw{
-  font-size: 2rem;
+@media (max-width:768px){
+  #menu-icon{
+    display: block;
+    /* color: #333; */
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
 }
-.fa-solid{
-  font-size: 2rem;
+#menu-toggle:checked + #menu-icon + .navbar {
+    right: 0;
+}
+
+.navbar li {
+    margin: 20px 0;
+}
+
+.navbar li a {
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+}
 }
 .home{
   width: 100%;
-  height: 550px;
-  /* min-height: 100vh; */
-  background-image: url("https://t4.ftcdn.net/jpg/08/56/60/37/360_F_856603772_39tc2I0I2HZbYGs1ludgpqKGRmwCbW02.jpg");
+  height: 730px;
+  background-image: url('home.jpg.jpg'); /* Add your background image here */
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom;
-  background-attachment: fixed;
+  background-position: center;
   z-index: 100;
-  /* opacity: 0.6; */
-  /* display: flex; */
-  /* align-items: center; */
 }
 .home:hover{
-    opacity: 0.6;
+  opacity: 0.9;
 }
 .home::before {
   content: '';
@@ -82,50 +119,44 @@ header{
   top: 0;
   left: 0;
   width: 100%;
-  height: 550px;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust color and opacity (RGBA) */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); 
   pointer-events: none; /* Ensure the overlay doesn't block interactions */
 }
-/*
-.home-text h1{
-  font-size: 2.7rem;
-  left: 50%;
-  vertical-align: center;
-  display: flex;
-}
-.btn{
-  margin: 15px;
-  padding: 10px 14px;
-  background-color: blue;
-  color: #fff;
-  border-radius: 0.3rem;
-  font-size: 14px;
-} */
+
 .home-text {
   display: flex;
   flex-direction: column; 
   justify-content: center; 
   align-items: center; 
   height: 100vh; 
+  /* border: 2px solid white; */
 }
+
 .home-text h1 {
   font-size: 2.7rem;
   text-align: center;
   margin-bottom: 20px; 
-  color: black;
+  color: floralwhite;
 }
+
 .home-text p{
   font-size: 1.7rem;
   color: ghostwhite;
 }
+
 .btn {
   margin: 15px;
   padding: 10px 14px;
-  background-color: Red;
+  background-color: burlywood;
   color: #fff;
-  border-radius: 0.3rem;
+  border-radius: 2.5rem;
   font-size: 14px;
   cursor: pointer; 
   text-align: center;
 }
 
+#shop{
+  font-size: 2rem;
+  color: white;
+}
